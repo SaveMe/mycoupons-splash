@@ -1,39 +1,42 @@
 <html>
 <head>
-  <title>Heroku versions: <%= @stack %></title>
+  <link rel="shortcut icon" href="http://www.snapguide.com/favicon.ico" type="image/x-icon">
+	<title>DeelWheel</title>
+	<link rel="stylesheet" href="/style.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>DeelWheel</title>
+     <script type="text/javascript">
+
+       var _gaq = _gaq || [];
+       _gaq.push(['_setAccount', 'UA-22597234-1']);
+       _gaq.push(['_setDomainName', '.deelwheel.com']);
+       _gaq.push(['_trackPageview']);
+
+       (function() {
+         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+       })();
+
+     </script>
 </head>
 
 <body>
-  <h1><%= @stack %></h1>
+<div id="container">
+        <div id="logo"></div>
+		<div class="box">
+			<p>DeelWheel</p>
+			<hr />
+			<p style="color:grey">win. win. no lose.</p>
+			<p>This is some text.</p>
+			<hr />
+			<p>This is some text.</p>
 
-  <p>
-    <a href="http://aspen-versions.heroku.com/">aspen-mri-1.8.6</a> |
-    <a href="http://bamboo-ree-versions.heroku.com/">bamboo-ree-1.8.7</a> |
-    <a href="http://bamboo-mri192-versions.heroku.com/">bamboo-mri-1.9.2</a> |
-    <a href="http://cedar-versions.herokuapp.com/">cedar</a> |
-    <a href="http://github.com/wuputah/heroku-versions">source code</a>
-  </p>
+		</div>
 
-  <pre>
-<strong><%= defined?(RUBY_DESCRIPTION) ? RUBY_DESCRIPTION : "ruby #{RUBY_VERSION} (#{RUBY_RELEASE_DATE} patchlevel #{RUBY_PATCHLEVEL}) [#{RUBY_PLATFORM}]" %>
-<%= "rubygems #{Gem::VERSION}" %></strong>
-
-<strong>$ env</strong>
-<%= ENV.collect { |k, v| "#{k}=#{v}" }.join("\n") %>
-
-
-<strong>$ gem list</strong>
-<%= `gem list`.strip %>
-
-
-<strong>$ dpkg -l</strong>
-<% unless (dpkg = `dpkg -l | grep ^ii`.strip).empty? %><%=
-  dpkg.split("\n").collect { |s| s.split(/  +/) }.collect { |pkg| "#{pkg[1]} (#{pkg[2]})" }.join("\n")
-%><% else %><span style="color: red">InformationTooUsefulError</span><% end %>
-  </pre>
-
-<p><a href="/evil">Nobody expects the Spanish Inquisition!</a></p>
+        <div id="contact">Follow us on <a href="http://www.twitter.com/DeelWheel">Twitter</a>. <!-- Signup for <a href="http://eepurl.com/dlr_U">our mailing list</a>. --> Or drop us <a href="mailto:info@deelwheel.com">a line</a>.</div>
+        
+</div>
 
 </body>
-
 </html>
